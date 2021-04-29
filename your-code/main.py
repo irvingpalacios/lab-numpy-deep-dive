@@ -19,6 +19,7 @@ print (a)
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
 
+print("5.-\n")
 b = np.ones((5,2,3))
 
 #6. Print b.
@@ -27,25 +28,31 @@ print (b)
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 
-if a.size = b.size:
-    True
+if a.size == b.size:
+    print( True)
 else:
-    False
+    print (False)
 
 
 #8. Are you able to add a and b? Why or why not?
 
-print( a+b)
+    ##print( a+b)
 
-## Yes, we can add both arrays because they are of the same size and shape
+    ##ValueError: operands could not be broadcast together with shapes (2,3,5) (5,2,3)
+
+## No, we can't add both arrays because they are not of the same size and shape
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
 
+c= b.reshape(2,3,5)
 
+print ("9.-\n",c)
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
 
+d = np.add(a,c)
 
+print("10.-\n\nd:",d)
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 
